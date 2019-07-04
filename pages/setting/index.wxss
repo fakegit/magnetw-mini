@@ -1,0 +1,73 @@
+/**index.wxss**/
+
+.rule-container {
+  font-size: 15px;
+}
+
+.rule-label {
+  padding: 10px 15px;
+}
+
+.rule-textarea {
+  min-height: 50px;
+  width: 100%;
+  max-height: 100px;
+}
+
+.rule-textarea-container {
+  background-color: white;
+  padding: 10px 15px;
+}
+
+.trackers-container {
+  background-color: white;
+  padding: 10px 15px;
+  font-size: 15px;
+}
+
+.trackers-message {
+  font-size: 10px;
+  color: #888;
+}
+
+.help-container {
+  margin-top: 5%;
+}
+
+.title {
+  margin: 10px;
+  font-size: 15px;
+  color: rgba(69, 90, 100, 0.6);
+}
+
+.about-item {
+  color: #333;
+  font-size: 15px;
+  background-color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.button-label {
+  line-height: 1;
+  border-radius: 0px;
+}
+
+.button-label::after {
+  border: none;
+}
+
+.about-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.save-button button {
+  background-color: #409eff;
+  border: 1px;
+  margin-top: 5%;
+  width: 100%;
+  border-radius: 0px;
+}

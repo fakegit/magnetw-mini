@@ -1,0 +1,16 @@
+/* pages/help/index.wxss */
+
+.text {
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+cover-image {
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 180px;
+  min-height: 338px;
+  margin-bottom: 10px;
+}

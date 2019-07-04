@@ -1,0 +1,16 @@
+<scroll-view style='background-color: white;padding-top: 2%;padding-bottom: 2%;'>
+  <view class='text'>1、复制磁力链接</view>
+  <cover-image src="{{images[0]}}"></cover-image>
+
+  <view class='text'>2、进入到手机迅雷（或其它支持下载磁力的APP），添加新的下载任务</view>
+  <cover-image src="{{images[1]}}"></cover-image>
+
+  <view class='text'>3、选择要下载的文件</view>
+  <cover-image src="{{images[2]}}"></cover-image>
+
+  <view class='text'>4、如果是视频，点击正在下载的任务可以进入到在线播放</view>
+  <cover-image src="{{images[3]}}"></cover-image>
+
+  <view class='text'>5、在线播放需要良好的速度，所以建议下载完成后再播放</view>
+  <cover-image src="{{images[4]}}"></cover-image>
+</scroll-view>

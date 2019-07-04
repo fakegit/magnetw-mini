@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="trackers-container" bindtap="onTrackersEnabled">
+  <van-checkbox value="{{ config.trackersEnabled }}" checked-color="#409EFF">
+    启用磁力链接优化
+  </van-checkbox>
+  <view class="trackers-message">如果出现异常请关闭此选项</view>
+</view>
+
+<van-button type="primary" bindtap="reloadRule" class='save-button'>更新源站规则</van-button>
+
+<view class='help-container'>
+  <view class="title">帮助</view>
+  <van-cell arrow-direction="right" title="如何下载/播放磁力链接？" bindtap="clickHelp" />
+    <button open-type="feedback" class="about-item button-label">意见反馈</button>
+</view>
+<van-toast id="van-toast" />

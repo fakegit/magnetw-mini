@@ -1,0 +1,91 @@
+/**index.wxss**/
+
+.current-source-container {
+  background-color: white;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.icon-setting{
+  float: right;
+  padding-right: 8px;
+}
+
+.current-source {
+  color: #409eff;
+}
+
+.loading-container {
+  height: 88%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-container {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+
+.result-item {
+  width: 90%;
+  margin: 1.5% 0;
+  padding: 1% 2%;
+  border-radius: 5px;
+  background-color: white;
+  word-break: break-all; /**两端对齐**/
+}
+
+.result-item-name {
+  font-size: 16px;
+}
+
+.result-item-name-keyword {
+  color: #ff7a76;
+}
+
+.result-item-info {
+  margin-top: 0.2em;
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+.item-info-container {
+  display: flex;
+  align-items: center;
+}
+
+.item-info-icon {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.item-resolution-tag {
+  margin-right: 5px;
+}
+
+.item-resolution-tag .tag-index--van-tag{
+  font-size: 11px;
+  padding-right: .3em;
+  padding-bottom: .1em;
+}
+
+.option-item {
+  padding: 10px 20px;
+}
+
+.dividing {
+  height: 1px;
+  background-color: #eee;
+}
+
+.dividing-padding {
+  margin-left: 20px;
+  margin-right: 20px;
+}

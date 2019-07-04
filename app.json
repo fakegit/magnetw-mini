@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/setting/index",
+    "pages/help/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "磁力搜",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-icon": "miniprogram_npm/vant-weapp/icon/index",
+    "van-tag": "miniprogram_npm/vant-weapp/tag/index",
+    "van-row": "miniprogram_npm/vant-weapp/row/index",
+    "van-col": "miniprogram_npm/vant-weapp/col/index",
+    "van-toast": "miniprogram_npm/vant-weapp/toast/index",
+    "van-popup": "miniprogram_npm/vant-weapp/popup/index",
+    "van-search": "miniprogram_npm/vant-weapp/search/index",
+    "van-loading": "miniprogram_npm/vant-weapp/loading/index",
+    "van-picker": "miniprogram_npm/vant-weapp/picker/index",
+    "van-field": "miniprogram_npm/vant-weapp/field/index",
+    "van-button": "miniprogram_npm/vant-weapp/button/index",
+    "van-checkbox": "miniprogram_npm/vant-weapp/checkbox/index",
+    "van-cell": "miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "miniprogram_npm/vant-weapp/cell-group/index",
+    "van-dialog": "miniprogram_npm/vant-weapp/dialog/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

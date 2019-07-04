@@ -1,0 +1,50 @@
+var hilightWord = function(key, word) {
+  var idx = word.toLowerCase().indexOf(key);
+  var t = [];
+  if (idx > -1) {
+    if (idx == 0) {
+      t = hilightWord(key, word.substring(key.length));
+      t.unshift({
+        key: true,
+        str: word.substring(idx, idx + key.length)
+      });
+      return t;
+    }
+    if (idx > 0) {
+      t = hilightWord(key, word.substring(idx));
+      t.unshift({
+        key: false,
+        str: word.substring(0, idx)
+      });
+      return t;
+    }
+  }
+  return [{
+    key: false,
+    str: word
+  }];
+};
+
+var indexOfByRules = function (rules, site) {
+  for (var i = 0; i < rules.length; i++) {
+    if (rules[i].site == site) {
+      return i;
+    }
+  }
+  return 0;
+}
+
+var is2KOr4K = function(resolution) {
+  return resolution.indexOf('2K') >= 0 || resolution.indexOf('4K') >= 0;
+}
+var formatText = function (text) {
+  var reg = getRegExp("\t|\n", "g");
+  return text.replace(reg, "");
+}
+
+module.exports = {
+  formatHtmlView: hilightWord,
+  indexOfByRules: indexOfByRules,
+  is2KOr4K: is2KOr4K,
+  formatText: formatText
+};

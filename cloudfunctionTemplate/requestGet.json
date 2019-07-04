@@ -1,0 +1,14 @@
+[
+  {
+    "name": "搜索",
+    "value": {
+      "uri": "api/search",
+      "params": {
+        "source": "BT%E5%85%94%E5%AD%90",
+        "keyword": "呵呵",
+        "page": 1,
+        "sort": "time"
+      }
+    }
+  }
+]

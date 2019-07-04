@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<wxs src="index.wxs" module="index" />
+<scroll-view bindscrolltolower="onLoadMore" scroll-y enable-back-to-top lower-threshold="150" class='full-container'>
+  <!--网站列表-->
+  <view class='current-source-container'>
+    <view>
+      <text bindtap="clickChangeSource">
+        <text>当前源站：</text>
+      <text class='current-source'>{{data.current.site}}</text>
+      </text>
+      <van-icon name="setting-o" class="icon-setting" size="20px" bindtap="clickSetting" />
+    </view>
+  </view>
+
+  <!--搜索-->
+  <van-search value="{{ data.current.keyword }}" use-action-slot bind:search="onSearch" bind:change="onSearchChanged" placeholder="{{placeholder}}" >
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search>
+
+  <!--内容-->
+  <view class='container result-container'>
+    <block wx:for="{{data.results}}">
+      <block wx:for="{{item.items}}" wx:key="detailUrl">
+
+        <!--Item开始-->
+        <view class='result-item' bindtap="clickItem" data-src="{{item.magnet}}" data-tracker="{{item.magnet+data.trackersString}}">
+
+          <!--清晰度-->
+          <block wx:if="{{item.resolution.length>0}}">
+            <van-tag wx:if="{{index.is2KOr4K(item.resolution)}}" class="item-resolution-tag" plain type="success">{{item.resolution}}</van-tag>
+            <van-tag wx:else class="item-resolution-tag" plain color="#409EFF">{{item.resolution}}</van-tag>
+          </block>
+          <!--名称-->
+          <text class='result-item-name'>
+       <block wx:for="{{index.formatHtmlView(data.current.keyword,index.formatText(item.name))}}" wx:for-item="name" wx:key="str">
+              <text wx:if='{{name.key}}' class='result-item-name-keyword'>{{name.str}}</text>
+          <block wx:else>{{name.str}}</block>
+      </block>
+      </text>
+      <!--描述信息-->
+        <van-row gutter="5" class="result-item-info">
+          <van-col span="10">
+            <view class="item-info-container">
+              <van-icon class="item-info-icon" name="underway-o" />
+              <text class='van-ellipsis'>{{index.formatText(item.date)}}</text>
+            </view>
+          </van-col>
+          <van-col span="8">
+            <view class="item-info-container">
+              <van-icon class="item-info-icon" name="description" />
+              <text class='van-ellipsis'>{{index.formatText(item.formatSize)}}</text>
+            </view>
+          </van-col>
+          <van-col span="6">
+            <view class="item-info-container">
+              <text class="item-info-icon">人气</text>
+              <text class='van-ellipsis'>{{item.hot}}</text>
+            </view>
+          </van-col>
+        </van-row>
+      </view>
+      <!--Item结束-->
+    </block>
+    </block>
+
+    <!--加载更多-->
+    <view wx:if="{{loadmore}}" style='padding-top:10px;padding-bottom:10px;'>
+      <van-loading size="20px" color="#409EFF" />
+      <text style='font-size:14px;color:#409EFF;margin-left:10px'>加载中...</text>
+    </view>
+  </view>
+
+  <!--loading-->
+  <view class='loading-container' wx:if="{{loading}}">
+    <van-loading size="45px" color="#409EFF" />
+  </view>
+</scroll-view>
+
+<van-toast id="van-toast" />
+
+<!--源站列表-->
+<van-popup show="{{ showSources }}" position="bottom" bind:click-overlay="onCloseSourcePicker" close-on-click-overlay="{{true}}">
+  <van-picker columns="{{ rules }}" value-key="site" title="切换源站" show-toolbar bind:confirm="onConfirmSource" defaultIndex="{{index.indexOfByRules(rules,data.current.site)}}" bind:cancel="onCloseSourcePicker" />
+</van-popup>
