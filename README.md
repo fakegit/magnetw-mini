@@ -9,7 +9,9 @@
 <img src="screenshots/1.gif" width="250"/>
 
 ## 本地编译
-由于小程序对请求的的限制，项目中用到了__云函数__，如果要在本地编译，还需要开通[云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)  
+项目中使用[npm](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)构建	
+
+由于小程序对请求的的限制，项目中用到了**云函数**，如果要在本地编译，还需要开通[云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)  
 
 *因为云开发提供的免费额度有限，随时可能超限导致无法访问，所以建议自行编译使用
 
