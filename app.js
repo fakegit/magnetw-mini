@@ -59,7 +59,9 @@ App({
           console.log(res.result)
           callback(res.result.data)
           that.globalData.rules = res.result.data
+          //更新规则时间
           that.globalData.config.lastRuleModified = new Date().getTime()
+          that.applyConfig(that.globalData.config)
           //更新缓存
           wx.setStorageSync('rules', res.result.data);
         } else {
