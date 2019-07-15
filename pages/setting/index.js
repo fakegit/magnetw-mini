@@ -12,7 +12,7 @@ Page({
   },
   onLoad: function() {
     this.setData({
-      lastRuleModified: util.formatTime(new Date(app.globalData.lastRuleModified)),
+      lastRuleModified: util.formatTime(new Date(app.globalData.config.lastRuleModified)),
       config: app.globalData.config
     });
 

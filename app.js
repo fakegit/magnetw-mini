@@ -15,7 +15,7 @@ App({
       }
 
       //降低规则更新频率 超过24小时才更新一次规则
-      if (new Date().getTime() - this.globalData.lastRuleModified > 86400000) {
+      if (new Date().getTime() - this.globalData.config.lastRuleModified > 86400000) {
         this.requestMagnetRule(function() {
           console.log("初始化更新缓存成功-->")
         }, function() {
@@ -59,7 +59,7 @@ App({
           console.log(res.result)
           callback(res.result.data)
           that.globalData.rules = res.result.data
-          that.globalData.lastRuleModified = new Date().getTime()
+          that.globalData.config.lastRuleModified = new Date().getTime()
           //更新缓存
           wx.setStorageSync('rules', res.result.data);
         } else {
