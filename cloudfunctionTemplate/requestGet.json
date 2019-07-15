@@ -4,8 +4,8 @@
     "value": {
       "uri": "api/search",
       "params": {
-        "source": "BT%E5%85%94%E5%AD%90",
-        "keyword": "呵呵",
+        "source": "种子搜",
+        "keyword": "钢铁侠",
         "page": 1,
         "sort": "time"
       }
