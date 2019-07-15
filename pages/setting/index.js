@@ -1,15 +1,18 @@
 //index.js
 import Toast from '../../miniprogram_npm/vant-weapp/toast/toast';
 import Dialog from '../../miniprogram_npm/vant-weapp/dialog/dialog';
+var util = require('../../utils/util.js');
 
 const app = getApp();
 Page({
   data: {
     config: null,
-    placeholder: null
+    placeholder: null,
+    lastRuleModified: null
   },
   onLoad: function() {
     this.setData({
+      lastRuleModified: util.formatTime(new Date(app.globalData.lastRuleModified)),
       config: app.globalData.config
     });
 

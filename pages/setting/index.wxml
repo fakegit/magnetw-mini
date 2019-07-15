@@ -4,6 +4,7 @@
     启用磁力链接优化
   </van-checkbox>
   <view class="trackers-message">如果出现异常请关闭此选项</view>
+  <view class="trackers-message rule-modified-message">最后更新时间：{{ lastRuleModified }}</view>
 </view>
 
 <van-button type="primary" bindtap="reloadRule" class='save-button'>更新源站规则</van-button>

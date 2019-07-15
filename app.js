@@ -13,11 +13,17 @@ App({
       if (typeof config == 'object') {
         this.globalData.config = config;
       }
-      this.requestMagnetRule(function() {
-        console.log("初始化更新缓存成功-->")
-      }, function() {
-        console.log("初始化更新缓存失败-->")
-      })
+
+      //降低规则更新频率 超过24小时才更新一次规则
+      if (new Date().getTime() - this.globalData.lastRuleModified > 86400000) {
+        this.requestMagnetRule(function() {
+          console.log("初始化更新缓存成功-->")
+        }, function() {
+          console.log("初始化更新缓存失败-->")
+        })
+      } else {
+        console.log("未到更新时间-->")
+      }
     }
 
 
@@ -53,6 +59,7 @@ App({
           console.log(res.result)
           callback(res.result.data)
           that.globalData.rules = res.result.data
+          that.globalData.lastRuleModified = new Date().getTime()
           //更新缓存
           wx.setStorageSync('rules', res.result.data);
         } else {
@@ -84,6 +91,7 @@ App({
   globalData: {
     rules: [],
     config: {
+      lastRuleModified: 0,
       trackersEnabled: true
     }
   }

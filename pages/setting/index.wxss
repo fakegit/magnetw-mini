@@ -25,9 +25,13 @@
   font-size: 15px;
 }
 
-.trackers-message {
+.trackers-message, .rule-modified-message{
   font-size: 10px;
   color: #888;
+}
+
+.rule-modified-message {
+  text-align: right;
 }
 
 .help-container {
