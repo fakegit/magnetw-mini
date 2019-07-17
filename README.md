@@ -2,18 +2,21 @@
 小程序基于[magnetW](https://github.com/dengyuhan/magnetW)的API实现，要本地调试小程序，需要先搭建[magnetW](https://github.com/dengyuhan/magnetW)来提供接口
 
 
-## 直接体验
+## 示例程序
 <img src="screenshots/mini.jpg" width="180"/>
 
 ## 截图
 <img src="screenshots/1.gif" width="250"/>
 
+
+## 关于暂停示例小程序的说明
+由于云开发的配额超限，代码审核也不再被通过，示例程序随时无法访问，如要使用请自行编译
+
+<img src="screenshots/2.jpg" width="200"/>
+
 ## 本地编译
 项目中使用[npm](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)构建	
-
 由于小程序对请求的的限制，项目中用到了**云函数**，如果要在本地编译，还需要开通[云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)  
-
-*因为云开发提供的免费额度有限，随时可能超限导致无法访问，所以建议自行编译使用
 
 >*测试appid无法使用云开发
 
