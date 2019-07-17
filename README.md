@@ -3,16 +3,16 @@
 
 
 ## 示例程序
-<img src="screenshots/mini.jpg" width="180"/>
+<img src="screenshots/mini.jpg" width="160"/>
 
 ## 截图
-<img src="screenshots/1.gif" width="250"/>
+<img src="screenshots/1.gif" width="200"/>
 
 
 ## 关于暂停示例小程序的说明
-由于云开发的配额超限，代码审核也不再被通过，示例程序随时无法访问，如要使用请自行编译
+由于云开发的配额超限，代码审核也不让通过了，示例程序随时无法访问，如要使用还是自行编译比较好
 
-<img src="screenshots/2.jpg" width="200"/>
+<img src="screenshots/2.jpg" width="250"/>
 
 ## 本地编译
 项目中使用[npm](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)构建	
@@ -20,4 +20,11 @@
 
 >*测试appid无法使用云开发
 
-修改[functions/requestGet](functions/requestGet/index.js)中的`baseUrl`为`magnetW`的访问根目录，上传云函数
+修改 [functions/requestGet](functions/requestGet/index.js) 中的`baseUrl`为`magnetW`的访问根目录，上传云函数
+
+
+### 相关项目
+[magnetW](https://github.com/dengyuhan/magnetW)  
+[vant-weapp](https://github.com/youzan/vant-weapp)  
+[got](https://github.com/sindresorhus/got)  
+[wepy](https://github.com/Tencent/wepy)
