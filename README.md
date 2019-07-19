@@ -27,4 +27,3 @@
 [magnetW](https://github.com/dengyuhan/magnetW)  
 [vant-weapp](https://github.com/youzan/vant-weapp)  
 [got](https://github.com/sindresorhus/got)  
-[wepy](https://github.com/Tencent/wepy)
