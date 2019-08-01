@@ -5,9 +5,9 @@
 <img src="screenshots/1.gif" width="200"/>
 
 ## 示例程序
-<img src="screenshots/mini.jpg" width="160
+<img src="screenshots/mini.jpg" width="160"/>
 
-## 停止示例小程序的说明
+#### 停止示例小程序的说明
 由于云开发的配额超限，代码审核也不让通过了，所以将停止示例小程序，如要使用可以自行编译
 
 <img src="screenshots/2.jpg" width="250"/>
