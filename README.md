@@ -1,16 +1,14 @@
 ## 介绍
 小程序基于[magnetW](https://github.com/dengyuhan/magnetW)的API实现，要本地调试小程序，需要先搭建[magnetW](https://github.com/dengyuhan/magnetW)来提供接口
 
-
-## 示例程序
-<img src="screenshots/mini.jpg" width="160"/>
-
 ## 截图
 <img src="screenshots/1.gif" width="200"/>
 
+## 示例程序
+<img src="screenshots/mini.jpg" width="160
 
-## 关于暂停示例小程序的说明
-由于云开发的配额超限，代码审核也不让通过了，示例程序随时无法访问，如要使用还是自行编译比较好
+## 停止示例小程序的说明
+由于云开发的配额超限，代码审核也不让通过了，所以将停止示例小程序，如要使用可以自行编译
 
 <img src="screenshots/2.jpg" width="250"/>
 
